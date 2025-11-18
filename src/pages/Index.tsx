@@ -23,13 +23,16 @@ const Index = () => {
         <div className="container mx-auto px-6 lg:px-12 relative z-10 pt-32 pb-20">
           <div className="max-w-5xl">
             <div className="space-y-8 animate-fade-up">
+              <p className="font-display text-xl md:text-2xl text-accent uppercase tracking-wider mb-4">
+                Selar Condutas. Proteger Negócios.
+              </p>
               <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-none">
-                Condutas Seladas.
+                O Futuro da Manutenção
                 <br />
-                <span className="text-blue-light">Negócio Protegido.</span>
+                <span className="text-blue-light">de Extrações de Cozinha</span>
               </h1>
               <p className="font-body text-xl md:text-2xl text-primary-foreground/90 max-w-2xl leading-relaxed">
-                Sistema inovador de limpeza e selagem de condutas de extração que reduz custos de manutenção até 50% enquanto garante máxima segurança e higiene.
+                Solução inovadora para reduzir custos de limpeza de extrações de cozinha até <strong>50%</strong>, apoiando um futuro mais limpo e sustentável para o sector da restauração.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link to="/contactos">
@@ -58,15 +61,44 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
       </section>
 
+      {/* Video Section */}
+      <section className="py-32 bg-secondary/20">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-up">
+            <h2 className="font-display text-5xl md:text-6xl font-bold mb-6">
+              Veja o Sistema em Ação
+            </h2>
+            <p className="font-body text-xl text-muted-foreground leading-relaxed">
+              Caso de Estudo: Five Guys Stoke-On-Trent - Selagem Completa do Sistema
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black aspect-video animate-scale-in">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/umGHDpn_IBQ"
+                title="Case Study: Five Guys Stoke-On-Trent"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What We Do */}
       <section className="py-32 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-up">
             <h2 className="font-display text-5xl md:text-6xl font-bold mb-6">
-              O Que Fazemos
+              O Que é o RZ-Clean-Seal?
             </h2>
             <p className="font-body text-xl text-muted-foreground leading-relaxed">
-              Fornecemos uma solução completa de 4 etapas que transforma a manutenção de condutas de extração em cozinhas comerciais.
+              O RZ-Clean-Seal é uma solução inovadora para reduzir os custos de limpeza de extrações de cozinha até <strong>50%</strong>, apoiando ao mesmo tempo um futuro mais limpo e sustentável para o sector da restauração.
+            </p>
+            <p className="font-body text-lg text-muted-foreground leading-relaxed mt-4">
+              O nosso sistema único ajuda restaurantes, hotéis e cozinhas comerciais a manter operações seguras, conformes e eficientes, reduzindo a frequência e o custo da limpeza de condutas.
             </p>
           </div>
 
@@ -79,18 +111,18 @@ const Index = () => {
               },
               {
                 step: "02",
-                title: "Limpeza",
-                description: "Limpeza profissional profunda de todas as condutas, removendo acumulação de gordura.",
+                title: "Limpar",
+                description: "Limpeza profissional profunda de todas as condutas, removendo toda a acumulação de gordura e resíduos.",
               },
               {
                 step: "03",
-                title: "Selagem",
-                description: "Aplicação do nosso revestimento inovador que impede a acumulação futura de gordura.",
+                title: "Selar",
+                description: "Aplicação do nosso revestimento inovador que cria uma barreira protetora contra a acumulação futura de gordura.",
               },
               {
                 step: "04",
-                title: "Manutenção",
-                description: "Programa de manutenção preventiva simplificado com custos significativamente reduzidos.",
+                title: "Manter",
+                description: "Programa de manutenção preventiva simplificado que reduz custos operacionais significativamente.",
               },
             ].map((item, index) => (
               <div
@@ -119,26 +151,29 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-slide-right">
               <h2 className="font-display text-5xl md:text-6xl font-bold leading-tight">
-                Porquê Escolher
+                Quanto Poderá
                 <br />
-                <span className="text-accent">RZ-CLEAN-SEAL?</span>
+                <span className="text-accent">Poupar?</span>
               </h2>
+              <p className="font-body text-xl text-muted-foreground leading-relaxed">
+                Com a solução RZ-Clean-Seal poderá poupar até <strong>50%</strong> dos seus custos totais de limpeza!
+              </p>
               <div className="space-y-6">
                 {[
                   {
                     icon: TrendingDown,
                     title: "Redução de Custos até 50%",
-                    description: "Poupe significativamente nos custos de limpeza contínua com o nosso sistema de selagem inovador.",
+                    description: "Poupe significativamente nos custos de limpeza contínua e manutenção com o nosso sistema de selagem inovador.",
                   },
                   {
                     icon: Shield,
-                    title: "Segurança Garantida",
-                    description: "Minimize riscos de incêndio e garanta total conformidade com regulamentações de segurança.",
+                    title: "Segurança e Conformidade",
+                    description: "Reduza riscos de incêndio, melhore a eficiência e prolongue a vida útil do sistema, garantindo total conformidade com regulamentações.",
                   },
                   {
                     icon: Leaf,
                     title: "Sustentabilidade",
-                    description: "Solução ecológica que reduz o uso de químicos agressivos e água nas limpezas.",
+                    description: "Solução com sustentabilidade no coração - reduz consumo de energia, uso de químicos agressivos e impacto ambiental.",
                   },
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-4 group">
@@ -185,12 +220,13 @@ const Index = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-up">
             <h2 className="font-display text-5xl md:text-6xl font-bold">
-              Como Funciona
+              A Nossa Abordagem Comprovada
             </h2>
             <p className="font-body text-xl text-muted-foreground leading-relaxed">
-              O sistema RZ-CLEAN-SEAL baseia-se em anos de investigação e testes com clientes de alto perfil. 
-              A nossa tecnologia de selagem única cria uma barreira que impede a acumulação de gordura, 
-              transformando a manutenção de condutas para sempre.
+              A nossa abordagem de três etapas — <strong>Limpar, Selar, Manter</strong> — construiu uma sólida reputação internacional por <strong>reduzir o consumo de energia, melhorar a eficiência, prolongar a vida útil dos sistemas e diminuir os riscos de incêndio</strong>, tudo isto oferecendo um valor excecional aos clientes.
+            </p>
+            <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              O sistema RZ-CLEAN-SEAL baseia-se em anos de investigação e testes com clientes de alto perfil. A nossa tecnologia de selagem única cria uma barreira que impede a acumulação de gordura, transformando a manutenção de condutas para sempre.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Link to="/ciencia">
@@ -220,11 +256,10 @@ const Index = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-up">
             <h2 className="font-display text-5xl md:text-6xl font-bold">
-              Pronto para Transformar a Sua Manutenção?
+              Entre no Futuro
             </h2>
             <p className="font-body text-xl text-primary-foreground/90 leading-relaxed">
-              Junte-se a centenas de restaurantes, hotéis e estabelecimentos comerciais que já reduziram 
-              custos e aumentaram a segurança com o RZ-CLEAN-SEAL.
+              Junte-se a centenas de restaurantes, hotéis e cozinhas comerciais que já reduziram custos e aumentaram a segurança com o RZ-CLEAN-SEAL. A escolha inteligente para empresas que pensam no futuro em toda a indústria de food service.
             </p>
             <Link to="/contactos">
               <Button

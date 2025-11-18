@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/rz-clean-seal-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <h3 className="font-display text-2xl font-bold">RZ-CLEAN-SEAL</h3>
+            <img src={logo} alt="RZ-CLEAN-SEAL" className="h-12 w-auto" />
             <p className="font-body text-sm text-primary-foreground/80 leading-relaxed">
-              Sistema inovador de limpeza e selagem de condutas de extração. 
-              Proteção garantida para o seu negócio.
+              Selar Condutas. Proteger Negócios. Solução inovadora para reduzir custos de limpeza até 50%.
             </p>
           </div>
 
@@ -81,20 +81,20 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Phone size={18} className="mt-0.5 flex-shrink-0" />
-                <span className="font-body text-sm text-primary-foreground/80">
-                  +351 XXX XXX XXX
-                </span>
+                <a href="tel:+441924856390" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  +44 (0)1924 856390
+                </a>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail size={18} className="mt-0.5 flex-shrink-0" />
-                <span className="font-body text-sm text-primary-foreground/80">
-                  info@rz-clean-seal.pt
-                </span>
+                <a href="mailto:enquiries@rz-clean-seal.com" className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  enquiries@rz-clean-seal.com
+                </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0" />
                 <span className="font-body text-sm text-primary-foreground/80">
-                  Portugal
+                  Unit 2a Brindley Way, Wakefield, West Yorkshire WF2 0XQ
                 </span>
               </li>
             </ul>

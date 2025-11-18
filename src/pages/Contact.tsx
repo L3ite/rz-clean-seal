@@ -171,20 +171,22 @@ const Contact = () => {
                       {
                         icon: Phone,
                         title: "Telefone",
-                        content: "+351 XXX XXX XXX",
+                        content: "+44 (0)1924 856390",
                         subtitle: "Seg-Sex: 09:00 - 18:00",
+                        link: "tel:+441924856390",
                       },
                       {
                         icon: Mail,
                         title: "Email",
-                        content: "info@rz-clean-seal.pt",
+                        content: "enquiries@rz-clean-seal.com",
                         subtitle: "Resposta em 24h",
+                        link: "mailto:enquiries@rz-clean-seal.com",
                       },
                       {
                         icon: MapPin,
                         title: "Localização",
-                        content: "Portugal",
-                        subtitle: "Serviços a nível nacional",
+                        content: "Unit 2a Brindley Way, Wakefield",
+                        subtitle: "West Yorkshire WF2 0XQ",
                       },
                       {
                         icon: Clock,
@@ -204,9 +206,15 @@ const Contact = () => {
                           <h4 className="font-display text-lg font-semibold mb-1">
                             {item.title}
                           </h4>
-                          <p className="font-body text-foreground mb-1">
-                            {item.content}
-                          </p>
+                          {item.link ? (
+                            <a href={item.link} className="font-body text-foreground mb-1 hover:text-accent transition-colors block">
+                              {item.content}
+                            </a>
+                          ) : (
+                            <p className="font-body text-foreground mb-1">
+                              {item.content}
+                            </p>
+                          )}
                           <p className="font-body text-sm text-muted-foreground">
                             {item.subtitle}
                           </p>
