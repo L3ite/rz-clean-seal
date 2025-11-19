@@ -1,21 +1,12 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/rz-clean-seal-logo.png";
+import rzCleanSealLogo from "@/assets/rz-clean-seal-logo.png";
 
 const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -32,16 +23,14 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/95 backdrop-blur-md shadow-sm`}
     >
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <img 
-              src={logo} 
+              src={rzCleanSealLogo} 
               alt="RZ-CLEAN-SEAL" 
               className="h-10 md:h-12 w-auto transition-opacity group-hover:opacity-80"
             />
@@ -53,14 +42,11 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-body text-sm font-medium transition-colors hover:text-accent relative ${
-                  location.pathname === link.path ? "text-accent" : "text-foreground"
+                className={`font-body text-sm font-medium transition-colors hover:text-gray-300 relative text-white ${
+                  location.pathname === link.path ? "font-extrabold" : ""
                 }`}
               >
                 {link.name}
-                {location.pathname === link.path && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent" />
-                )}
               </Link>
             ))}
             <Link to="/contactos">
@@ -76,7 +62,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 hover:bg-secondary rounded-lg transition-colors"
+            className="lg:hidden p-2 hover:bg-gray-700 rounded-lg transition-colors text-white"
             aria-label="Menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,14 +72,14 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-background border-t border-border animate-fade-in">
+        <div className="lg:hidden bg-black/95 animate-fade-in">
           <div className="container mx-auto px-6 py-6 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block font-body text-base font-medium py-2 transition-colors hover:text-accent ${
-                  location.pathname === link.path ? "text-accent" : "text-foreground"
+                className={`block font-body text-base font-medium py-2 transition-colors hover:text-gray-300 text-white ${
+                  location.pathname === link.path ? "font-extrabold" : ""
                 }`}
               >
                 {link.name}

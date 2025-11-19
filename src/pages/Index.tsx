@@ -4,6 +4,7 @@ import { ArrowRight, Shield, TrendingDown, Leaf, CheckCircle } from "lucide-reac
 import heroImage from "@/assets/hero-ducts.jpg";
 import kitchenImage from "@/assets/kitchen-system.jpg";
 
+
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -241,11 +242,33 @@ const Index = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 font-medium"
+                  className="border-2 font-medium hover:bg-accent hover:text-accent-foreground"
                 >
                   Conhecer a Nossa História
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-24 sm:py-32 bg-background">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 className="text-center font-display text-5xl font-bold leading-8 text-foreground mb-12">
+              Alguns dos nossos <span className="text-accent">Clientes Valiosos</span>
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              {Array.from({ length: 6 }).map((_, index) => (
+                <div key={index} className="p-4">
+                  <img
+                    className="w-full h-auto object-contain"
+                    src="/placeholder.svg"
+                    alt={`Partner logo ${index + 1}`}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
