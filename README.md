@@ -1,73 +1,82 @@
-# Welcome to your Lovable project
+# RZ-Clean-Seal
 
-## Project info
+RZ-Clean-Seal is a modern web application that showcases the innovative RZ-Clean-Seal system for kitchen extraction cleaning and sealing. It provides detailed information about the benefits, the science behind the technology, and the services offered.
 
-**URL**: https://lovable.dev/projects/fdf62a47-0ed6-4ae0-87d9-d5fc2e8e2664
+![RZ-Clean-Seal Screenshot](public/placeholder.svg) 
 
-## How can I edit this code?
+## Key Features
 
-There are several ways of editing your application.
+- **Detailed Service Information:** Comprehensive details about the inspection, cleaning, and sealing process.
+- **Benefits Overview:** Clear presentation of the cost savings, safety improvements, and environmental benefits.
+- **Real Case Studies:** See the system in action with real-world examples and testimonials.
+- **Responsive Design:** Fully responsive and accessible on all devices, from mobile to desktop.
+- **Modern Tech Stack:** Built with the latest technologies for a fast, reliable, and scalable experience.
 
-**Use Lovable**
+## Technologies Used
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fdf62a47-0ed6-4ae0-87d9-d5fc2e8e2664) and start prompting.
+This project is built with a modern and robust tech stack:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **[Vite](https://vitejs.dev/):** A next-generation frontend tooling that provides a faster and leaner development experience.
+- **[React](https://reactjs.org/):** A JavaScript library for building user interfaces.
+- **[TypeScript](https://www.typescriptlang.org/):** A typed superset of JavaScript that compiles to plain JavaScript.
+- **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for rapid UI development.
+- **[shadcn/ui](https://ui.shadcn.com/):** A collection of re-usable components built using Radix UI and Tailwind CSS.
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+To get a local copy up and running, follow these simple steps.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+You need to have [Node.js](https://nodejs.org/en/) (version 18.x or later) and [npm](https://www.npmjs.com/) installed on your machine. A good way to manage Node.js versions is by using [nvm](https://github.com/nvm-sh/nvm).
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/your-username/rz-clean-seal.git
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
+    cd rz-clean-seal
+    ```
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Available Scripts
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+In the project directory, you can run:
 
-**Edit a file directly in GitHub**
+-   `npm run dev`: Runs the app in the development mode. Open [http://localhost:5173](http://localhost:5173) to view it in the browser. The page will reload if you make edits.
+-   `npm run build`: Builds the app for production to the `dist` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+-   `npm run lint`: Lints the project files using ESLint to ensure code quality and consistency.
+-   `npm run preview`: Serves the production build locally to preview the final app.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deployment
 
-**Use GitHub Codespaces**
+The easiest way to deploy this project is by using a platform like [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/), or [GitHub Pages](https://pages.github.com/). These platforms offer seamless integration with GitHub repositories and provide a simple deployment process.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+For example, with Vercel:
+1.  Push your code to a GitHub repository.
+2.  Sign up for a Vercel account and connect your GitHub.
+3.  Import your project from the GitHub repository.
+4.  Vercel will automatically detect the framework and build settings.
+5.  Click "Deploy" and your application will be live in minutes.
 
-## What technologies are used for this project?
+## Contributing
 
-This project is built with:
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
-## How can I deploy this project?
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
-Simply open [Lovable](https://lovable.dev/projects/fdf62a47-0ed6-4ae0-87d9-d5fc2e8e2664) and click on Share -> Publish.
+## License
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Distributed under the MIT License. See `LICENSE` for more information.

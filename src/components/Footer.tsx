@@ -105,7 +105,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="font-body text-sm text-primary-foreground/60">
-              © {currentYear} RZ-CLEAN-SEAL. Todos os direitos reservados.
+              © {currentYear} RZ-CLEAN-SEAL. Todos os direitos reservados. | Desenvolvido por <a href="https://massivatek.pt" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-foreground transition-colors">MassivaTek</a>.
             </p>
             <div className="flex space-x-6">
               <Link

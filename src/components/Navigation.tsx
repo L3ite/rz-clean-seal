@@ -42,21 +42,13 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-body text-sm font-medium transition-colors hover:text-gray-300 relative text-white ${
+                className={`font-body text-sm font-medium relative text-white transition-all duration-200 ease-in-out transform hover:scale-110 hover:font-bold ${
                   location.pathname === link.path ? "font-extrabold" : ""
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Link to="/contactos">
-              <Button
-                variant="default"
-                className="bg-accent text-accent-foreground hover:bg-accent/90 font-medium transition-all hover:scale-105"
-              >
-                Pedir Orçamento
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,21 +70,13 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block font-body text-base font-medium py-2 transition-colors hover:text-gray-300 text-white ${
+                className={`block font-body text-base font-medium py-2 text-white transition-all duration-200 ease-in-out transform hover:scale-105 hover:font-bold ${
                   location.pathname === link.path ? "font-extrabold" : ""
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Link to="/contactos" className="block pt-4">
-              <Button
-                variant="default"
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-medium"
-              >
-                Pedir Orçamento
-              </Button>
-            </Link>
           </div>
         </div>
       )}

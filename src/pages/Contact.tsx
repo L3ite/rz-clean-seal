@@ -4,6 +4,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -224,7 +230,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-accent/10 to-blue-lighter/10 rounded-2xl p-8 space-y-4">
+                <div className="bg-gradient-to-br from-accent/10 to-teal-lighter/10 rounded-2xl p-8 space-y-4">
                   <h3 className="font-display text-xl font-bold">
                     Porquê Escolher-nos?
                   </h3>
@@ -262,7 +268,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <Accordion type="single" collapsible className="w-full space-y-4">
               {[
                 {
                   question: "Quanto tempo demora a instalação?",
@@ -281,20 +287,16 @@ const Contact = () => {
                   answer: "Absolutamente. O revestimento RZ-CLEAN-SEAL é completamente seguro para contacto alimentar, resistente a altas temperaturas e certificado para uso em ambientes comerciais.",
                 },
               ].map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-background p-6 rounded-xl animate-fade-up"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  <h3 className="font-display text-lg font-semibold mb-2">
+                <AccordionItem key={index} value={`item-${index}`} className="bg-background rounded-xl px-6 animate-fade-up" style={{ animationDelay: `${index * 50}ms` }}>
+                  <AccordionTrigger className="font-display text-lg font-semibold text-left hover:no-underline">
                     {faq.question}
-                  </h3>
-                  <p className="font-body text-muted-foreground">
+                  </AccordionTrigger>
+                  <AccordionContent className="font-body text-muted-foreground pt-2">
                     {faq.answer}
-                  </p>
-                </div>
+                  </AccordionContent>
+                </AccordionItem>
               ))}
-            </div>
+            </Accordion>
           </div>
         </div>
       </section>

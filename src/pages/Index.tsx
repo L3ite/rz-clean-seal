@@ -1,8 +1,50 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, TrendingDown, Leaf, CheckCircle } from "lucide-react";
-import heroImage from "@/assets/hero-ducts.jpg";
 import kitchenImage from "@/assets/kitchen-system.jpg";
+import { useRef } from 'react';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+
+const PartnersSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.2 });
+
+  const logos = [
+    { src: "https://irp.cdn-website.com/e0c98fb4/dms3rep/multi/WAGAMAMA.svg", alt: "Wagamama Logo" },
+    { src: "https://irp.cdn-website.com/e0c98fb4/dms3rep/multi/BLACKLOCK.svg", alt: "Blacklock Logo" },
+    { src: "https://irp.cdn-website.com/e0c98fb4/dms3rep/multi/HAWKSMOOR+2.svg", alt: "Hawksmoor Logo" },
+    { src: "https://irp.cdn-website.com/e0c98fb4/dms3rep/multi/FIVE+GUYS+3.svg", alt: "Five Guys Logo" },
+    { src: "https://irp.cdn-website.com/e0c98fb4/dms3rep/multi/TGI+FRIDAYS+2.svg", alt: "TGI Fridays Logo" },
+    { src: "https://irp.cdn-website.com/e0c98fb4/dms3rep/multi/PICCOLINO+LOGO+1.svg", alt: "Piccolino Logo" },
+  ];
+
+  return (
+    <section ref={sectionRef} className="py-24 sm:py-32 bg-background">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-center font-display text-5xl font-bold leading-8 text-foreground mb-12">
+            Alguns dos nossos <span className="text-accent">Clientes Valiosos</span>
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+            {logos.map((logo, index) => (
+              <div 
+                key={index} 
+                className={`p-4 transition-all duration-500 ease-in-out transform hover:scale-110 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <img
+                  className="w-full h-52 object-contain"
+                  src={logo.src}
+                  alt={logo.alt}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 
 const Index = () => {
@@ -10,56 +52,15 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "brightness(0.4)",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/50 to-background z-0" />
-        
-        <div className="container mx-auto px-6 lg:px-12 relative z-10 pt-32 pb-20">
-          <div className="max-w-5xl">
-            <div className="space-y-8 animate-fade-up">
-              <p className="font-display text-xl md:text-2xl text-accent uppercase tracking-wider mb-4">
-                Selar Condutas. Proteger Negócios.
-              </p>
-              <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-none">
-                O Futuro da Manutenção
-                <br />
-                <span className="text-blue-light">de Extrações de Cozinha</span>
-              </h1>
-              <p className="font-body text-xl md:text-2xl text-primary-foreground/90 max-w-2xl leading-relaxed">
-                Solução inovadora para reduzir custos de limpeza de extrações de cozinha até <strong>50%</strong>, apoiando um futuro mais limpo e sustentável para o sector da restauração.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link to="/contactos">
-                  <Button
-                    size="lg"
-                    className="bg-accent text-accent-foreground hover:bg-accent/90 font-medium text-lg px-8 transition-all hover:scale-105 group"
-                  >
-                    Pedir Orçamento Gratuito
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                  </Button>
-                </Link>
-                <Link to="/ciencia">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 font-medium text-lg px-8 backdrop-blur-sm"
-                  >
-                    Descobrir a Ciência
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://vid.cdn-website.com/e0c98fb4/videos/vLMbVNgsRzeOqhKRIpWC_UPDATED+RZ+VID-v.mp4" type="video/mp4" />
+        </video>
       </section>
 
       {/* Video Section */}
@@ -192,7 +193,7 @@ const Index = () => {
                   </div>
                 ))}
               </div>
-              <Link to="/beneficios">
+              <Link to="/beneficios" className="block pt-8">
                 <Button
                   size="lg"
                   variant="default"
@@ -205,7 +206,7 @@ const Index = () => {
             </div>
 
             <div className="relative animate-slide-left">
-              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-blue-lighter/20 rounded-3xl blur-2xl" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-teal-lighter/20 rounded-3xl blur-2xl" />
               <img
                 src={kitchenImage}
                 alt="Sistema de ventilação em cozinha comercial"
@@ -252,27 +253,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section className="py-24 sm:py-32 bg-background">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center font-display text-5xl font-bold leading-8 text-foreground mb-12">
-              Alguns dos nossos <span className="text-accent">Clientes Valiosos</span>
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="p-4">
-                  <img
-                    className="w-full h-auto object-contain"
-                    src="/placeholder.svg"
-                    alt={`Partner logo ${index + 1}`}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <PartnersSection />
 
       {/* CTA Section */}
       <section className="py-32 bg-primary text-primary-foreground">
@@ -284,7 +265,7 @@ const Index = () => {
             <p className="font-body text-xl text-primary-foreground/90 leading-relaxed">
               Junte-se a centenas de restaurantes, hotéis e cozinhas comerciais que já reduziram custos e aumentaram a segurança com o RZ-CLEAN-SEAL. A escolha inteligente para empresas que pensam no futuro em toda a indústria de food service.
             </p>
-            <Link to="/contactos">
+            <Link to="/contactos" className="block pt-8">
               <Button
                 size="lg"
                 className="bg-accent text-accent-foreground hover:bg-accent/90 font-medium text-lg px-10 transition-all hover:scale-105"

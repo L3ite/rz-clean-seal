@@ -19,25 +19,23 @@ const Benefits = () => {
       icon: TrendingDown,
       title: "Redução de Custos até 50%",
       description: "Poupe significativamente nos custos de limpeza contínua. O nosso sistema de selagem reduz drasticamente a frequência de limpezas necessárias, resultando em poupanças substanciais a longo prazo.",
-      color: "from-accent to-blue-lighter",
+      color: "from-accent to-teal-lighter",
     },
     {
       icon: Shield,
-      title: "Segurança Máxima Garantida",
-      description: "Minimize drasticamente o risco de incêndio causado por acumulação de gordura. Cumpra todas as regulamentações de segurança e proteja o seu estabelecimento, equipa e clientes.",
-      color: "from-blue-lighter to-accent",
+      color: "from-teal-lighter to-accent",
     },
     {
       icon: Clock,
       title: "Menos Disrupção Operacional",
       description: "Reduza a frequência de intervenções e o tempo necessário para limpezas. O seu negócio pode operar normalmente sem paragens prolongadas para manutenção de condutas.",
-      color: "from-accent to-blue-lighter",
+      color: "from-accent to-teal-lighter",
     },
     {
       icon: Leaf,
       title: "Solução Ecológica",
       description: "Reduza significativamente o uso de produtos químicos agressivos e água nas limpezas. Contribua para um futuro mais sustentável enquanto mantém os mais altos padrões de higiene.",
-      color: "from-blue-lighter to-accent",
+      color: "from-teal-lighter to-accent",
     },
   ];
 

@@ -52,7 +52,7 @@ const About = () => {
               </div>
 
               <div className="relative animate-slide-left">
-                <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 to-blue-lighter/20 rounded-3xl blur-2xl" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 to-teal-lighter/20 rounded-3xl blur-2xl" />
                 <div className="relative bg-secondary p-8 rounded-2xl space-y-8">
                   <div className="space-y-3">
                     <div className="text-accent font-display text-5xl font-bold">50%</div>
@@ -174,7 +174,7 @@ const About = () => {
                   <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
                     {step.image ? (
                       <div className="relative">
-                        <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-blue-lighter/10 rounded-3xl blur-xl" />
+                        <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-teal-lighter/10 rounded-3xl blur-xl" />
                         <img
                           src={step.image}
                           alt={step.title}

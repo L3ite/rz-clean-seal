@@ -216,7 +216,7 @@ const Pricing = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-accent/10 to-blue-lighter/10 rounded-3xl p-12 text-center space-y-6 animate-fade-up">
+            <div className="bg-gradient-to-br from-accent/10 to-teal-lighter/10 rounded-3xl p-12 text-center space-y-6 animate-fade-up">
               <h2 className="font-display text-3xl md:text-4xl font-bold">
                 Investimento que se Paga a Si Próprio
               </h2>
