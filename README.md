@@ -2,7 +2,7 @@
 
 RZ-Clean-Seal is a modern web application that showcases the innovative RZ-Clean-Seal system for kitchen extraction cleaning and sealing. It provides detailed information about the benefits, the science behind the technology, and the services offered.
 
-![RZ-Clean-Seal Screenshot](public/placeholder.svg) 
+![RZ-Clean-Seal Screenshot](/src/assets/rz-clean-seal-logo.png) 
 
 ## Key Features
 
