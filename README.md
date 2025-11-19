@@ -10,7 +10,7 @@ RZ-Clean-Seal is a modern web application that showcases the innovative RZ-Clean
 - **Benefits Overview:** Clear presentation of the cost savings, safety improvements, and environmental benefits.
 - **Real Case Studies:** See the system in action with real-world examples and testimonials.
 - **Responsive Design:** Fully responsive and accessible on all devices, from mobile to desktop.
-- **Modern Tech Stack:** Built with the latest technologies for a fast, reliable, and scalable experience.
+- **Modern Tech Stack:** Built with the latest technologies for a fast, reliable, and scalable experience
 
 ## Technologies Used
 
